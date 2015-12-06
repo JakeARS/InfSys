@@ -11,7 +11,7 @@
     <form id="form1" runat="server">
     <div>
     
-        <div>
+        <div style="background-color: black">
             <asp:ImageButton ID="ImageButton1" runat="server" Height="81px" ImageUrl="~/photo.jpg" PostBackUrl="~/dashboard.aspx" Width="81px" />
         </div>
     

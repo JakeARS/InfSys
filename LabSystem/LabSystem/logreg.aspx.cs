@@ -9,9 +9,6 @@ namespace LabSystem
 {
     public partial class Logreg : System.Web.UI.Page
     {
-        private String user = "Leviosa";
-        private String pass = "123";
-
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -19,18 +16,53 @@ namespace LabSystem
 
         protected void Login1_Authenticate(object sender, AuthenticateEventArgs e)
         {
-            if (Login1.UserName == user)
-            {
-                if (Login1.Password == pass)
-                {
-                    Response.Redirect("/dashboard.aspx");
-                }
-            }
+            //if (Login1.UserName == user)
+            //{
+            //    if (Login1.Password == pass)
+            //    {
+            //        Response.Redirect("/dashboard.aspx");
+            //    }
+            //}
         }
 
         protected void LoginButton0_Click(object sender, EventArgs e)
         {
             Response.Redirect("/reg.aspx");
+        }
+        
+        protected void LoginButton_Click(object sender, EventArgs e)
+        {
+            //if (Login1.UserName == user)
+            //{
+            //    if (Login1.Password == pass)
+            //    {
+            //        Response.Redirect("/dashboard.aspx");
+            //    }
+
+                addingUserDataContext db = new addingUserDataContext();
+
+            try
+            {
+                var user = (from u in db.users
+                    where u.login == Login1.UserName
+                    select u).ToArray();
+
+                foreach (users t in user)
+                {
+                    if (Login1.UserName == user[0].login)
+                    {
+                        if (Login1.Password.GetHashCode().ToString() == user[0].password)
+                        {
+                            Response.Redirect("/dashboard.aspx");
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            //}
         }
     }
 }

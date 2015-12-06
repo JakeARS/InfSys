@@ -48,6 +48,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -71,6 +72,11 @@
       <DependentUpon>Users.mdf</DependentUpon>
     </Content>
     <Content Include="packages.config" />
+    <Content Include="addingUser.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>addingUser.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -88,6 +94,11 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addingUser.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>addingUser.dbml</DependentUpon>
+    </Compile>
     <Compile Include="dashboard.aspx.cs">
       <DependentUpon>dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -110,6 +121,14 @@
     <Compile Include="reg.aspx.designer.cs">
       <DependentUpon>reg.aspx</DependentUpon>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="addingUser.dbml.layout">
+      <DependentUpon>addingUser.dbml</DependentUpon>
+    </None>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

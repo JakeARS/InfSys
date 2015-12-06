@@ -10,7 +10,7 @@
 namespace LabSystem {
     
     
-    public partial class reg {
+    public partial class Reg {
         
         /// <summary>
         /// form1 элемент управления.

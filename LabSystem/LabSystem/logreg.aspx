@@ -38,7 +38,6 @@
 <body>
     <form id="form1" runat="server">
     <div>
-    
         <div style="background-color: black">
             <asp:ImageButton ID="ImageButton1" runat="server" Height="81px" Width="81px" ImageUrl="~/photo.jpg" />
         </div>
@@ -89,7 +88,7 @@
                                             <tr>
                                                 <td align="right" colspan="2">&nbsp;<asp:Button ID="Button1" runat="server" BackColor="White" BorderColor="#507CD1" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" ForeColor="#284E98" OnClick="LoginButton0_Click" Text="Регистрация" />
                                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    <asp:Button ID="LoginButton" runat="server" BackColor="White" BorderColor="#507CD1" BorderStyle="Solid" BorderWidth="1px" CommandName="Login" CssClass="auto-style6" Font-Names="Verdana" Font-Size="Small" ForeColor="#284E98" Height="25px" Text="Вход" ValidationGroup="Login1" Width="78px" />
+                                                    <asp:Button ID="LoginButton" runat="server" BackColor="White" BorderColor="#507CD1" BorderStyle="Solid" BorderWidth="1px" CommandName="Login" CssClass="auto-style6" Font-Names="Verdana" Font-Size="Small" ForeColor="#284E98" Height="25px" Text="Вход" ValidationGroup="Login1" Width="78px" OnClick="LoginButton_Click" />
                                                 </td>
                                             </tr>
                                         </table>

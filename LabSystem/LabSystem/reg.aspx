@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="reg.aspx.cs" Inherits="LabSystem.reg" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="reg.aspx.cs" Inherits="LabSystem.Reg" %>
 
 <!DOCTYPE html>
 
@@ -37,7 +37,7 @@
             height: 24px;
         }
         .auto-style42 {
-            height: 82px;
+            height: 81px;
         }
         .auto-style43 {
             height: 136px;
@@ -65,7 +65,7 @@
     
         
     
-        <div class="auto-style42" style="background-color: black">
+        <div style="background-color: black">
             <asp:ImageButton ID="ImageButton1" runat="server" Height="81px" ImageUrl="~/photo.jpg" Width="81px" />
         </div>
         <br />
