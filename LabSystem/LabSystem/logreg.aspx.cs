@@ -25,15 +25,12 @@ namespace LabSystem
                 {
                     Response.Redirect("/dashboard.aspx");
                 }
-                else
-                {
-                    Label3.Text = "Неправильный пасворд";
-                }
             }
-            else
-            {
-                Label3.Text = "нет такого имени";
-            }
+        }
+
+        protected void LoginButton0_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/reg.aspx");
         }
     }
 }

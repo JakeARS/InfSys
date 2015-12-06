@@ -11,13 +11,13 @@
             width: 100%;
         }
         .auto-style2 {
-            width: 296px;
+            width: 300px;
         }
         .auto-style4 {
             margin-left: 0px;
         }
         .auto-style5 {
-            width: 344px;
+            width: 454px;
         }
         .auto-style6 {
             margin-left: 0px;
@@ -33,13 +33,13 @@
         .auto-style9 {
             height: 16px;
         }
-    </style>
+        </style>
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
     
-        <div>
+        <div style="background-color: black">
             <asp:ImageButton ID="ImageButton1" runat="server" Height="81px" Width="81px" ImageUrl="~/photo.jpg" />
         </div>
         <br />
@@ -47,23 +47,16 @@
         <table class="auto-style1">
             <tr>
                 <td class="auto-style2">&nbsp;</td>
-                <td class="auto-style5">&nbsp;</td>
-                <td>
-                    <asp:Label ID="Label3" runat="server" ForeColor="Red"></asp:Label>
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style2">&nbsp;</td>
                 <td class="auto-style5">
                     <asp:Login ID="Login1" runat="server" CssClass="auto-style4" Width="334px" BackColor="#EFF3FB" BorderColor="#B5C7DE" BorderPadding="4" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#333333" Height="154px" LoginButtonText="Вход" OnAuthenticate="Login1_Authenticate">
                         <InstructionTextStyle Font-Italic="True" ForeColor="Black" />
                         <LayoutTemplate>
-                            <table cellpadding="4" cellspacing="0" style="border-collapse:collapse;">
+                            <table cellpadding="4" cellspacing="0" style="border-collapse: collapse;">
                                 <tr>
                                     <td>
                                         <table cellpadding="0" class="auto-style7">
                                             <tr>
-                                                <td align="center" colspan="2" style="color:White;background-color:#507CD1;font-size:1.5em; font-weight:bold;">Выполнить вход</td>
+                                                <td align="center" colspan="2" style="color: White; background-color: #507CD1; font-size: 1.5em; font-weight: bold;">Выполнить вход</td>
                                             </tr>
                                             <tr>
                                                 <td align="right" class="auto-style8">
@@ -89,12 +82,13 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td align="center" class="auto-style9" colspan="2" style="color:Red;">
+                                                <td align="center" class="auto-style9" colspan="2" style="color: Red;">
                                                     <asp:Literal ID="FailureText" runat="server" EnableViewState="False"></asp:Literal>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td align="right" colspan="2">
+                                                <td align="right" colspan="2">&nbsp;<asp:Button ID="Button1" runat="server" BackColor="White" BorderColor="#507CD1" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" ForeColor="#284E98" OnClick="LoginButton0_Click" Text="Регистрация" />
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                     <asp:Button ID="LoginButton" runat="server" BackColor="White" BorderColor="#507CD1" BorderStyle="Solid" BorderWidth="1px" CommandName="Login" CssClass="auto-style6" Font-Names="Verdana" Font-Size="Small" ForeColor="#284E98" Height="25px" Text="Вход" ValidationGroup="Login1" Width="78px" />
                                                 </td>
                                             </tr>
