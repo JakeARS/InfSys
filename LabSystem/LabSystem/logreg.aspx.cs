@@ -32,37 +32,38 @@ namespace LabSystem
         
         protected void LoginButton_Click(object sender, EventArgs e)
         {
-            //if (Login1.UserName == user)
-            //{
-            //    if (Login1.Password == pass)
-            //    {
-            //        Response.Redirect("/dashboard.aspx");
-            //    }
-
-                addingUserDataContext db = new addingUserDataContext();
-
-            try
+            if (Login1.UserName == "Admin")
             {
-                var user = (from u in db.users
-                    where u.login == Login1.UserName
-                    select u).ToArray();
-
-                foreach (users t in user)
+                if (Login1.Password == "12345")
                 {
-                    if (Login1.UserName == user[0].login)
+                    Response.Redirect("/AdminDashboard.aspx?user=" + Login1.UserName);
+                }
+            }
+            else
+            {
+                try
+                {
+                    addingUserDataContext db = new addingUserDataContext();
+                    var user = (from u in db.users
+                        where u.login == Login1.UserName
+                        select u).ToArray();
+
+                    foreach (users t in user)
                     {
-                        if (Login1.Password.GetHashCode().ToString() == user[0].password)
+                        if (Login1.UserName == user[0].login)
                         {
-                            Response.Redirect("/dashboard.aspx");
+                            if (Login1.Password.GetHashCode().ToString() == user[0].password)
+                            {
+                                Response.Redirect("/dashboard.aspx?user=" + Login1.UserName);
+                            }
                         }
                     }
                 }
+                catch (Exception)
+                {
+                    throw;
+                }
             }
-            catch (Exception)
-            {
-                throw;
-            }
-            //}
         }
     }
 }

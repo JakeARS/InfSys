@@ -31,7 +31,7 @@ namespace LabSystem
                 db.users.InsertOnSubmit(usersDb);
                 db.SubmitChanges();
 
-                Response.Redirect("/dashboard.aspx");
+                Response.Redirect("/logreg.aspx");
             }
         }
     }

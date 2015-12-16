@@ -2,10 +2,16 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="addingUser">
   <DataContextMoniker Name="/addingUserDataContext" />
   <nestedChildShapes>
-    <classShape Id="17f9aa1d-be78-4285-8373-3ca80c87531e" absoluteBounds="3.25, 1.875, 2, 1.3862939453125">
+    <classShape Id="17f9aa1d-be78-4285-8373-3ca80c87531e" absoluteBounds="2.125, 1.875, 2, 1.3862939453125">
       <DataClassMoniker Name="/addingUserDataContext/users" />
       <nestedChildShapes>
-        <elementListCompartment Id="61e19442-34d2-48c5-a638-9e4b064a9ca3" absoluteBounds="3.265, 2.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="61e19442-34d2-48c5-a638-9e4b064a9ca3" absoluteBounds="2.14, 2.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9bb57ed6-4b59-4d05-8a09-416e4ad377a9" absoluteBounds="5, 1.875, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/addingUserDataContext/links" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0aab6c04-de32-4818-ac9f-675c35b578bb" absoluteBounds="5.015, 2.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>
