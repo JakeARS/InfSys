@@ -19,16 +19,6 @@
         <asp:Label ID="Label1" runat="server" Text="Личный кабинет"></asp:Label>
     
     </div>
-        <asp:GridView ID="GridView1" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
-            <Columns>
-                <asp:BoundField DataField="Id" HeaderText="№" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
-                <asp:BoundField DataField="name" HeaderText="Никнейм" SortExpression="name" />
-                <asp:BoundField DataField="task" HeaderText="Задание" SortExpression="task" />
-                <asp:BoundField DataField="link" HeaderText="Ссылка на работу" SortExpression="link" />
-                <asp:BoundField DataField="mark" HeaderText="Оценка" SortExpression="mark" />
-                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
-            </Columns>
-        </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [links] WHERE [Id] = @Id" InsertCommand="INSERT INTO [links] ([name], [task], [link], [mark]) VALUES (@name, @task, @link, @mark)" SelectCommand="SELECT * FROM [links]" UpdateCommand="UPDATE [links] SET [name] = @name, [task] = @task, [link] = @link, [mark] = @mark WHERE [Id] = @Id">
             <DeleteParameters>
                 <asp:Parameter Name="Id" Type="Int32" />
@@ -47,6 +37,19 @@
                 <asp:Parameter Name="Id" Type="Int32" />
             </UpdateParameters>
         </asp:SqlDataSource>
+        <asp:GridView ID="GridView2" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1">
+            <Columns>
+                <asp:BoundField DataField="Id" HeaderText="№" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
+                <asp:BoundField DataField="name" HeaderText="Имя" SortExpression="name" />
+                <asp:BoundField DataField="task" HeaderText="Задание" SortExpression="task" />
+                <asp:BoundField DataField="link" HeaderText="Ссылка на работу" SortExpression="link" />
+                <asp:BoundField DataField="mark" HeaderText="Оценка" SortExpression="mark" />
+                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+            </Columns>
+        </asp:GridView>
+        <div>
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" style="height: 25px" Text="Очистить всю таблицу" />
+        </div>
     </form>
 </body>
 </html>

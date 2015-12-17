@@ -34,7 +34,7 @@ namespace LabSystem
                 task.Text = string.Empty;
                 linktolab.Text = string.Empty;
                 Message.Text = string.Empty;
-                Response.Redirect("/dashboard.aspx");
+                Response.Redirect("/dashboard.aspx?user=" + Request.QueryString["user"]);
             }
             else
             {
